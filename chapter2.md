@@ -60,7 +60,8 @@ Use, select(name.of.your.dataframe ,  columns.to.be.selected)
 `@pre_exercise_code`
 
 ```{r}
-require('dplyr')
+library('dplyr')
+library('reshape2')
 cars<-mtcars
 ```
 
