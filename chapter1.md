@@ -69,3 +69,51 @@ success_msg("Some praise! Then reinforce a learning objective from the exercise.
 ```
 
 
+---
+
+## Insert exercise title here
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 417dd4352b   
+```
+
+
+test
+
+
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+cars<-mtcars
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
