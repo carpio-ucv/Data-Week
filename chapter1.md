@@ -113,3 +113,51 @@ cars<-mtcars
 ```
 
 
+---
+
+## Insert exercise title here
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 02d26e3683   
+```
+
+
+
+
+
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
