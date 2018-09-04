@@ -92,9 +92,10 @@ test
 `@pre_exercise_code`
 
 ```{r}
-cars<-mtcars
 library('dplyr')
-#library(reshape2)
+library('reshape2')
+cars<-mtcars
+
 ```
 
 
