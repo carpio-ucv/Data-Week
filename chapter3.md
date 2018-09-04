@@ -3,7 +3,7 @@ title: 'Reshaping data'
 description: ""
 ---
 
-## Wide format data
+## Wide format data (1/2)
 
 ```yaml
 type: NormalExercise 
@@ -31,7 +31,7 @@ You can use the function `melt()` (from the package reshape2) to transform the d
 
 
 `@instructions`
-
+Apply the function `melt()` and store the output in a new object called `long`
 
 `@hint`
 
@@ -42,6 +42,63 @@ You can use the function `melt()` (from the package reshape2) to transform the d
 library('dplyr')
 library('reshape2')
 cars<-mtcars
+```
+
+
+`@sample_code`
+
+```{r}
+# Create the object 'long' reshaping airquality to long format
+___ <- melt(___)
+
+# Explore the first few records of 'long'
+head(___)
+
+
+# Explore the last few records of 'long'
+tail(___)
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+---
+
+## Wide format data (2/2)
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: d309d1712e   
+```
+
+
+By default, `melt` assumes that all columns with numeric values are variables with values. Often this is what you want. However, in our previous example we may want to know the values of `ozone`, `solar.r`, `wind`, and `temp` for each `month` and `day`. We can do that with `melt` by telling it that we want month and day to be “ID variables”. ID variables are the variables that identify individual rows of data.
+
+
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
 ```
 
 
