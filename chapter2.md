@@ -589,3 +589,5 @@ msg3 <- "Incorrect. Please try again"
 ex() %>% check_mc(correct = 2,
                   feedback_msgs = c(msg1, msg2, msg3))
 ```
+
+
