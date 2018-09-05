@@ -163,7 +163,7 @@ Here, we need to tell dcast that month and day are the ID variables (we want a c
 ```{r}
 library('dplyr')
 library('reshape2')
-by.date <- melt(airquality , id.variable=c("month","day"))
+by.date <- melt(airquality , id.variable=c("Month","Day"))
 ```
 
 
