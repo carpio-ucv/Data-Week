@@ -258,29 +258,6 @@ The blue shading indicates ID variables that we want to represent individual row
 
 ---
 
-## EXERCISE 1
-
-```yaml
-type: PureMultipleChoiceExercise 
-xp: 50 
-key: 0ee984a37a   
-```
-
-
-
-
-
-`@hint`
-
-
-`@possible_answers`
-
-
-`@feedback`
-
-
----
-
 ## Final Practice
 
 ```yaml
