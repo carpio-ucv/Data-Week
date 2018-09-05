@@ -178,6 +178,12 @@ library('reshape2')
 # Run the code below to create the by.date variable again
 by.date <- melt(airquality, id.vars = c("Month", "Day"))
 
+# Create object 'original' to recover the same format we started with
+___ <- dcast(___, ___ + ___ ~ variable)
+
+# Explore the first few records of 'original'
+head(___)
+
 
 ```
 
