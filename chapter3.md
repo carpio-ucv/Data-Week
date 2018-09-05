@@ -107,7 +107,7 @@ cars <- mtcars
 
 ```{r}
 # Create the object 'long' reshaping airquality to long format
-___ <- melt(___ , id.variable=c("___" , "___"))
+___ <- melt(___ , id.vars = c("___" , "___"))
 
 # Explore the first few records of 'by.date'
 ___(by.date)
@@ -163,7 +163,7 @@ Here, we need to tell dcast that month and day are the ID variables (we want a c
 ```{r}
 library('dplyr')
 library('reshape2')
-by.date <- melt(airquality , id.variable=c("Month","Day"))
+by.date <- melt(airquality, id.vars = c("month", "day"))
 ```
 
 
