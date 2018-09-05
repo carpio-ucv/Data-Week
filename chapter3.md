@@ -57,7 +57,6 @@ head(___)
 
 # Explore the last few records of 'long'
 tail(___)
-
 ```
 
 
