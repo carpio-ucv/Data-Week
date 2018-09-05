@@ -107,7 +107,7 @@ cars <- mtcars
 
 ```{r}
 # Create the object 'long' reshaping airquality to long format
-___ <- melt(___ , ___ , id.variable=c(""))
+___ <- melt(___ , id.variable=c("___" , "___"))
 
 # Explore the first few records of 'by.date'
 ___(by.date)
@@ -143,9 +143,7 @@ key: 613bdd1dea
 ```
 
 
-In some occasions we need to transform our data from long- to wide-format
-
-we’ll explore the dcast function.
+In some occasions we need to transform our data from long- to wide-format. We can achieve that with the `dcast` function.
 
 Let’s take the long-format airquality data and cast it into some different wide formats. To start with, we’ll recover the same format we started with and compare the two.
 
@@ -163,7 +161,9 @@ Here, we need to tell dcast that month and day are the ID variables (we want a c
 `@pre_exercise_code`
 
 ```{r}
-
+library('dplyr')
+library('reshape2')
+by.date <- melt(aircuality , id.variable=c("month","day"))
 ```
 
 
@@ -239,5 +239,28 @@ The blue shading indicates ID variables that we want to represent individual row
 ```{r}
 
 ```
+
+
+---
+
+## EXERCISE 1
+
+```yaml
+type: PureMultipleChoiceExercise 
+xp: 50 
+key: 0ee984a37a   
+```
+
+
+
+
+
+`@hint`
+
+
+`@possible_answers`
+
+
+`@feedback`
 
 
