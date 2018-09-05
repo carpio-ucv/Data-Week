@@ -49,7 +49,7 @@ cars<-mtcars
 
 ```{r}
 # Create the object 'long' reshaping airquality to long format
-___ <- melt(___)
+___ <- melt(___ , ___)
 
 # Explore the first few records of 'long'
 head(___)
@@ -85,11 +85,11 @@ key: d309d1712e
 ```
 
 
-By default, `melt` assumes that all columns with numeric values are variables with values. Often this is what you want. However, in our previous example we may want to know the values of `ozone`, `solar.r`, `wind`, and `temp` for each `month` and `day`. We can do that with `melt` by telling it that we want month and day to be “ID variables”. ID variables are the variables that identify individual rows of data.
+By default, `melt` assumes that all columns with numeric values are variables with values. Often this is what you want. However, in our previous example we may want to know the values of `ozone`, `solar.r`, `wind`, and `temp` for each `month` and `day`. We can do that with `melt` by telling it that we want `month` and `day` to be “ID variables”. ID variables are the variables that identify individual rows of data, and remain constant while the rest of the data is reshaped.
 
 
 `@instructions`
-
+Create a new variable called `by.date` in which `airquality` is transform into long format, but the columns `month` and `day` are kept as ID variables.
 
 `@hint`
 
@@ -97,14 +97,24 @@ By default, `melt` assumes that all columns with numeric values are variables wi
 `@pre_exercise_code`
 
 ```{r}
-
+library('dplyr')
+library('reshape2')
+cars <- mtcars
 ```
 
 
 `@sample_code`
 
 ```{r}
+# Create the object 'long' reshaping airquality to long format
+___ <- dcast(___ , ___ , id.variable=c(""))
 
+# Explore the first few records of 'by.date'
+___(by.date)
+
+
+# Explore the last few records of 'by.date'
+tail(___)
 ```
 
 
