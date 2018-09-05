@@ -145,8 +145,6 @@ key: 613bdd1dea
 
 In some occasions we need to transform our data from long- to wide-format
 
-data is pretty straightforward, going from long- to wide-format data can take a bit more thought. It usually involves some head scratching and some trial and error for all but the simplest cases. Let’s go through some examples.
-
 we’ll explore the dcast function.
 
 Let’s take the long-format airquality data and cast it into some different wide formats. To start with, we’ll recover the same format we started with and compare the two.
