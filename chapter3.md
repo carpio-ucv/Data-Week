@@ -107,7 +107,7 @@ cars <- mtcars
 
 ```{r}
 # Create the object 'long' reshaping airquality to long format
-___ <- dcast(___ , ___ , id.variable=c(""))
+___ <- melt(___ , ___ , id.variable=c(""))
 
 # Explore the first few records of 'by.date'
 ___(by.date)
@@ -115,6 +115,115 @@ ___(by.date)
 
 # Explore the last few records of 'by.date'
 tail(___)
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+---
+
+## Long format data (1/2)
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 613bdd1dea   
+```
+
+
+In some occasions we need to transform our data from long- to wide-format
+
+data is pretty straightforward, going from long- to wide-format data can take a bit more thought. It usually involves some head scratching and some trial and error for all but the simplest cases. Let’s go through some examples.
+
+we’ll explore the dcast function.
+
+Let’s take the long-format airquality data and cast it into some different wide formats. To start with, we’ll recover the same format we started with and compare the two.
+
+dcast uses a formula to describe the shape of the data. The arguments on the left refer to the ID variables and the arguments on the right refer to the measured variables. Coming up with the right formula can take some trial and error at first. So, if you’re stuck don’t feel bad about just experimenting with formulas. There are usually only so many ways you can write the formula.
+
+Here, we need to tell dcast that month and day are the ID variables (we want a column for each) and that variable describes the measured variables. Since there is only one remaining column, dcast will figure out that it contains the values themselves. We could explicitly declare this with value.var. (And in some cases it will be necessary to do so.)
+
+
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
+```
+
+
+`@solution`
+
+```{r}
+
+```
+
+
+`@sct`
+
+```{r}
+
+```
+
+
+---
+
+## Long format data (2/2)
+
+```yaml
+type: NormalExercise 
+xp: 100 
+key: 9d8f450abc   
+```
+
+
+If it isn’t clear what happened in the previous example, then have a look at the following illustration:
+![](https://seananderson.ca/images/dcast-illustration.png)
+
+The blue shading indicates ID variables that we want to represent individual rows. The red shading represents variable names that we want to swing into column names. The grey shading represents the data values that we want to fill in the cells with.
+
+
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+
+```
+
+
+`@sample_code`
+
+```{r}
+
 ```
 
 
