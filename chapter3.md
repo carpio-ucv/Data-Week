@@ -145,15 +145,20 @@ key: 613bdd1dea
 
 In some occasions we need to transform our data from long- to wide-format. We can achieve that with the `dcast` function.
 
-Let’s take the long-format airquality data and cast it into some different wide formats. To start with, we’ll recover the same format we started with and compare the two.
+For instance, we can take the `by.date` variable that we just created (long-format airquality data) and cast it to recover the same format we started with.
 
-dcast uses a formula to describe the shape of the data. The arguments on the left refer to the ID variables and the arguments on the right refer to the measured variables. Coming up with the right formula can take some trial and error at first. So, if you’re stuck don’t feel bad about just experimenting with formulas. There are usually only so many ways you can write the formula.
+`dcast` uses a formula to describe the shape of the data. The arguments on the left refer to the ID variables and the arguments on the right refer to the measured variables. 
 
-Here, we need to tell dcast that month and day are the ID variables (we want a column for each) and that variable describes the measured variables. Since there is only one remaining column, dcast will figure out that it contains the values themselves. We could explicitly declare this with value.var. (And in some cases it will be necessary to do so.)
+```
+
+dcast(by.date, month + day ~ variable)
+```
+
+In the previous formula, we told `dcast` that `Month` and `Day` are the ID variables (we want a column for each) and that `variable` describes the measured variables. Since there is only one remaining column, `dcast` will figure out that it contains the values themselves. We could explicitly declare this with `value.var`. (And in some cases it will be necessary to do so.)
 
 
 `@instructions`
-
+Apply the `dcast` function to the `by.date` object as shown in the previous formula and store it in a new variable called `original`
 
 `@hint`
 
@@ -163,13 +168,16 @@ Here, we need to tell dcast that month and day are the ID variables (we want a c
 ```{r}
 library('dplyr')
 library('reshape2')
-by.date <- melt(airquality, id.vars = c("month", "day"))
+
 ```
 
 
 `@sample_code`
 
 ```{r}
+# Run the code below to create the by.date variable again
+by.date <- melt(airquality, id.vars = c("Month", "Day"))
+
 
 ```
 
