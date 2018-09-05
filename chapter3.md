@@ -215,7 +215,8 @@ key: 9d8f450abc
 
 Whereas going from wide- to long-format data is pretty straightforward, going from long- to wide-format data can take a bit more thought. It usually involves some head scratching and some trial and error for all but the simplest cases. 
 
-If it isn’t clear what happened in the previous example, then have a look at the following illustration:
+To have a better understanding of the example in the previous section, have a look at the following illustration:
+
 ![](https://seananderson.ca/images/dcast-illustration.png)
 
 The blue shading indicates ID variables that we want to represent individual rows. The red shading represents variable names that we want to swing into column names. The grey shading represents the data values that we want to fill in the cells with.
@@ -276,5 +277,48 @@ key: 0ee984a37a
 
 
 `@feedback`
+
+
+---
+
+## Final Practice
+
+```yaml
+type: MultipleChoiceExercise 
+xp: 50 
+key: cf82633e3d   
+```
+
+
+Using the `airquality`, find out what is the month of the year with more variability in `ozone` measures?
+
+
+`@instructions`
+- May (5)
+- June (6)
+- July (7)
+- August (8)
+
+`@hint`
+
+
+`@pre_exercise_code`
+
+```{r}
+library(dplyr)
+```
+
+
+`@sct`
+
+```{r}
+msg1 <- "Incorrect. Please try again"
+msg2 <- "Well done!" 
+msg3 <- "Incorrect. Please try again"
+msg4 <- "Incorrect. Please try again"
+
+ex() %>% check_mc(correct = 2,
+                  feedback_msgs = c(msg1, msg2, msg3, msg4))
+```
 
 
