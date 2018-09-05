@@ -201,6 +201,8 @@ key: 9d8f450abc
 ```
 
 
+Whereas going from wide- to long-format data is pretty straightforward, going from long- to wide-format data can take a bit more thought. It usually involves some head scratching and some trial and error for all but the simplest cases. 
+
 If it isn’t clear what happened in the previous example, then have a look at the following illustration:
 ![](https://seananderson.ca/images/dcast-illustration.png)
 
