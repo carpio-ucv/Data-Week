@@ -150,7 +150,7 @@ cars<-mtcars
 msg1 <- "Incorrect. Please try again" 
 msg2 <- "Incorrect. Please try again"
 msg3 <- "Incorrect. Please try again"
-msg4 <- "Correct"
+msg4 <- "Correct. Well done!"
 ex() %>% check_mc(correct = 4,
                   feedback_msgs = c(msg1, msg2, msg3, msg4))
 ```
