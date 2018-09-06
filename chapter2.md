@@ -97,7 +97,7 @@ select(yourdata, contains("year"))
 ```
 
 `@instructions`
-Create a new object called `variables` including only those columns from `cars` starting with the letter 'b'.
+Create a new object called `variables` including only those columns from `cars` starting with the letter 'd'.
 
 `@hint`
 
@@ -110,7 +110,7 @@ cars<-mtcars
 
 `@sample_code`
 ```{r}
-# Subset columns starting with 'b' and store them in a new object called 'variables'.
+# Subset columns starting with 'd' and store them in a new object called 'variables'.
 ___ <- ____
 
 # Explore 'variable'
@@ -119,7 +119,7 @@ head(___)
 
 `@solution`
 ```{r}
-variable <- select(cars, starts_with("b"))
+variable <- select(cars, starts_with("d"))
 head(variable)
 ```
 
