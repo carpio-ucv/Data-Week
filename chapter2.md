@@ -209,11 +209,17 @@ xp: 50
 -` x > y`, TRUE if `x` is greater than `y`
 - `x %in% c(a, b, c)`, TRUE if x is in the vector c(a, b, c)
 
-The following example filters `df` such that only the observations for which a is positive, are kept:
+The following example filters `df` such that only the observations for which `a` is positive are kept:
 
 ```
 
 filter(df, a > 0)
+```
+You can also assess multiple conditions simultaneously, for instance based on column `a` and `b` from the dataframe `df`:
+
+```
+
+filter(df, a > 0, b == 'London')
 ```
 
 By using the function `filter()` please determine how many vehicles weight more than 3 tons (`wt`), and have only 4 cylinders (`cyl`)
@@ -224,7 +230,7 @@ By using the function `filter()` please determine how many vehicles weight more 
 - 1 car.
 
 `@hint`
-
+Follow this structure: filter(cars, wt > ___ , cyl == ___ )
 
 `@pre_exercise_code`
 ```{r}
