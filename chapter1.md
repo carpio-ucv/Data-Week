@@ -101,7 +101,7 @@ five
 `@sct`
 ```{r}
 ex() %>% check_object("five") %>% check_equal(5)
-success_msg("amazing!")
+success_msg("You are learning very fast!")
 ```
 
 ---
