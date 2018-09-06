@@ -174,13 +174,13 @@ cars<- mtcars
 
 `@sample_code`
 ```{r}
-# Create a new object (kilometers) including an additional column calculating kilometres per gallog (kpg)
+# Create a new object (kilometers) to include an additional column calculating kilometres per gallog (kpg)
 ___ <- mutate( ___ , ___ )
 ```
 
 `@solution`
 ```{r}
-kilometers <- mutate(cars,kpg=mpg * 1.609)
+kilometers <- mutate(cars,kpg = mpg * 1.609)
 head(kilometers)
 ```
 
