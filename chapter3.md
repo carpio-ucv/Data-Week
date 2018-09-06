@@ -106,7 +106,7 @@ tail(___)
 
 `@solution`
 ```{r}
-by.date <- melt(cars , id.vars=("Month","Day"))
+by.date <- melt(cars , id.vars=c("Month","Day"))
 head(by.date)
 tail(by.date)
 ```
