@@ -180,7 +180,8 @@ ___ <- mutate( ___ , ___ )
 
 `@solution`
 ```{r}
-x<- "mazda"
+kilometers <- mutate(cars,kpg=mpg * 1.609))
+head(kilometers)
 ```
 
 `@sct`
