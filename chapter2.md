@@ -273,7 +273,7 @@ filter(df, !is.na(x))
 ```
 
 `@instructions`
-Filter the vehicles from `data` weighting more than two tons (`wt` column), excluding those with 8 cylinders `(cyl)`.
+Filter the vehicles from `cars` weighting more than 2 tons (`wt` column), and exclude those with 8 cylinders `(cyl)`. Save the output in an object called `filtered`
 
 `@hint`
 
@@ -286,12 +286,13 @@ cars<- mtcars
 
 `@sample_code`
 ```{r}
-
+#Create 'filtered', including vehcles of more than 2 tons and exclude 8 cylinder cars. 
+filtered <- ___ ( ___ , ___ )
 ```
 
 `@solution`
 ```{r}
-
+filtered <- filter ( cars , wt > 2 , cyl != 8 )
 ```
 
 `@sct`
