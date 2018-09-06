@@ -114,12 +114,22 @@ key: acd6cc7235
 xp: 50
 ```
 
-We have created a new object called `cars`. It contains a table (or dataframe as it is called in R) with information about different cars.
+We have created a new object called `cars`. It contains a table (or dataframe as it is called in R) with information about different vehicles.
 
 You can explore the first 6 records contained in the object `data`, by using the function:
-`head()`
 
-By using the function `head()`, please select the model of the car that appears in the fist row of `cars`
+```
+head()
+```
+
+Similarly, to explore the last few records of `cars` you can use the following code:
+
+```
+
+tail(cars)
+```
+
+By using the function `head()`, please select the model of the car that appears in the very first row of `cars`
 
 `@instructions`
 - Mazda RX4 Wag    
