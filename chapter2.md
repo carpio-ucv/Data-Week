@@ -87,7 +87,7 @@ xp: 100
 - `contains("X"): `every name that contains "X",
 - `matches("X"):` every name that matches "X", where "X" can be a regular expression,
 
-Pay attention here: When you refer to columns directly inside select(), you don't use quotes. If you use the helper functions, you do use quotes.
+Pay attention here: When you refer to columns directly inside `select()`, you don't use quotes. If you use the helper functions, you do use quotes.
 
 For instance, to select from 'yourdata' only those columns containing the word "year" in their name, you can use:
 
@@ -116,7 +116,7 @@ ___ <- ____
 
 `@solution`
 ```{r}
-
+variable <- select(cars, starts_with("b"))
 ```
 
 `@sct`
