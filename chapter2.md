@@ -315,7 +315,7 @@ key: 8f7a96ad99
 xp: 100
 ```
 
-The Pipe operator `%>%` allows you to pipe the output from one function to the input of another function. Instead of nesting functions (reading from the inside to the outside), the idea of piping is to read the functions from left to right. Have a look at the following two examples that are completely equivalent: 
+The Pipe operator `%>%` allows you to pipe the output from one function to the input of another function. Instead of nesting functions (reading from the inside to the outside), the idea of piping is to read the functions from left to right. Have a look at the two following examples which are completely equivalent: 
 
 ```{r , include=TRUE}
 # EXAMPLE 1: Inefficient method
@@ -324,7 +324,7 @@ new.df<- filter(new.df, mpg >16)
 new.df<- head(new.df)
 
 # EXAMPLE 2: Using Piping operator
-new.df<- select(df, mpg, wt) %>% filter(mpg >16) %>% head()
+new.df<-select(df, mpg, wt) %>% filter(mpg >16) %>% head()
 ```
 
 Note that the Example 2, can also be rewritten positioning the dataframe `df` that you want to manipulate at the beginning of the expression. This is a common practice to make the code more intuitive for the reader.
@@ -334,7 +334,7 @@ new.df<- df %>% select(mpg, wt) %>% filter(mpg >16) %>% head()
 ```
 
 `@instructions`
-Create a new object called 'weight' containing only the weight column `wt`, and excluding those cars with a weight lower than 2 tons
+Create a new object called `sample` that contains only the first 4 columns from `cars`, excluding the column `disp`. Then filter out those vehicles with 4 cylinders (`cyl`). Finally, subset the first 6 records using `head()`. You **MUST** use the piping operator `%>%` to create the `sample` dataframe.
 
 `@hint`
 
@@ -342,7 +342,7 @@ Create a new object called 'weight' containing only the weight column `wt`, and 
 `@pre_exercise_code`
 ```{r}
 library('dplyr')
-data<- mtcars
+cars<- mtcars
 ```
 
 `@sample_code`
