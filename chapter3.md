@@ -6,11 +6,10 @@ description: ""
 ## Wide format data (1/2)
 
 ```yaml
-type: NormalExercise 
-xp: 100 
-key: 9dec5b91fb   
+type: NormalExercise
+key: 9dec5b91fb
+xp: 100
 ```
-
 
 People often find it easier to record their data in wide format. In this format, each different data variable is presented in a separate column. For instance, the following dataframe contains 6 different columns with information about `airquality` measurements.
 
@@ -29,7 +28,6 @@ However, you need long-format data much more commonly than wide-format, speciall
 
 You can use the function `melt()` (from the package reshape2) to transform the data from wide format to long format.
 
-
 `@instructions`
 Apply the function `melt()` and store the output in a new object called `long`
 
@@ -37,16 +35,13 @@ Apply the function `melt()` and store the output in a new object called `long`
 
 
 `@pre_exercise_code`
-
 ```{r}
 library('dplyr')
 library('reshape2')
 cars<-mtcars
 ```
 
-
 `@sample_code`
-
 ```{r}
 # Create the object 'long' reshaping airquality to long format
 ___ <- melt(___ , ___)
@@ -59,34 +54,27 @@ head(___)
 tail(___)
 ```
 
-
 `@solution`
-
 ```{r}
 
 ```
-
 
 `@sct`
-
 ```{r}
 
 ```
-
 
 ---
 
 ## Wide format data (2/2)
 
 ```yaml
-type: NormalExercise 
-xp: 100 
-key: d309d1712e   
+type: NormalExercise
+key: d309d1712e
+xp: 100
 ```
 
-
 By default, `melt` assumes that all columns with numeric values are variables with values. Often this is what you want. However, in our previous example we may want to know the values of `ozone`, `solar.r`, `wind`, and `temp` for each `month` and `day`. We can do that with `melt` by telling it that we want `month` and `day` to be “ID variables”. ID variables are the variables that identify individual rows of data, and remain constant while the rest of the data is reshaped.
-
 
 `@instructions`
 Create a new variable called `by.date` in which `airquality` is transform into long format, but the columns `month` and `day` are kept as ID variables.
@@ -95,16 +83,13 @@ Create a new variable called `by.date` in which `airquality` is transform into l
 
 
 `@pre_exercise_code`
-
 ```{r}
 library('dplyr')
 library('reshape2')
 cars <- mtcars
 ```
 
-
 `@sample_code`
-
 ```{r}
 # Create the object 'long' reshaping airquality to long format
 ___ <- melt(___ , id.vars = c("___" , "___"))
@@ -117,31 +102,25 @@ ___(by.date)
 tail(___)
 ```
 
-
 `@solution`
-
 ```{r}
 
 ```
-
 
 `@sct`
-
 ```{r}
 
 ```
-
 
 ---
 
 ## Long format data (1/2)
 
 ```yaml
-type: NormalExercise 
-xp: 100 
-key: 613bdd1dea   
+type: NormalExercise
+key: 613bdd1dea
+xp: 100
 ```
-
 
 In some occasions we need to transform our data from long- to wide-format. We can achieve that with the `dcast` function.
 
@@ -156,7 +135,6 @@ dcast(by.date, month + day ~ variable)
 
 In the previous formula, we told `dcast` that `Month` and `Day` are the ID variables (we want a column for each) and that `variable` describes the measured variables. Since there is only one remaining column, `dcast` will figure out that it contains the values themselves. We could explicitly declare this with `value.var`. (And in some cases it will be necessary to do so.)
 
-
 `@instructions`
 Apply the `dcast` function to the `by.date` object as shown in the previous formula and store it in a new variable called `original`
 
@@ -164,16 +142,13 @@ Apply the `dcast` function to the `by.date` object as shown in the previous form
 
 
 `@pre_exercise_code`
-
 ```{r}
 library('dplyr')
 library('reshape2')
 
 ```
 
-
 `@sample_code`
-
 ```{r}
 # Run the code below to create the by.date variable again
 by.date <- melt(airquality, id.vars = c("Month", "Day"))
@@ -187,31 +162,25 @@ head(___)
 
 ```
 
-
 `@solution`
-
 ```{r}
 
 ```
-
 
 `@sct`
-
 ```{r}
 
 ```
-
 
 ---
 
 ## Long format data (2/2)
 
 ```yaml
-type: NormalExercise 
-xp: 100 
-key: 9d8f450abc   
+type: NormalExercise
+key: 9d8f450abc
+xp: 100
 ```
-
 
 Whereas going from wide- to long-format data is pretty straightforward, going from long- to wide-format data can take a bit more thought. It usually involves some head scratching and some trial and error for all but the simplest cases. 
 
@@ -221,7 +190,6 @@ To have a better understanding of the example in the previous section, have a lo
 
 The blue shading indicates ID variables that we want to represent individual rows. The red shading represents variable names that we want to swing into column names. The grey shading represents the data values that we want to fill in the cells with.
 
-
 `@instructions`
 
 
@@ -229,46 +197,36 @@ The blue shading indicates ID variables that we want to represent individual row
 
 
 `@pre_exercise_code`
-
 ```{r}
 
 ```
-
 
 `@sample_code`
-
 ```{r}
 
 ```
-
 
 `@solution`
-
 ```{r}
 
 ```
-
 
 `@sct`
-
 ```{r}
 
 ```
-
 
 ---
 
 ## Final Practice
 
 ```yaml
-type: MultipleChoiceExercise 
-xp: 50 
-key: cf82633e3d   
+type: MultipleChoiceExercise
+key: cf82633e3d
+xp: 50
 ```
 
-
 Using the `airquality`, find out what is the month of the year with more variability in `ozone` measures?
-
 
 `@instructions`
 - May (5)
@@ -280,14 +238,11 @@ Using the `airquality`, find out what is the month of the year with more variabi
 
 
 `@pre_exercise_code`
-
 ```{r}
 library(dplyr)
 ```
 
-
 `@sct`
-
 ```{r}
 msg1 <- "Incorrect. Please try again"
 msg2 <- "Well done!" 
@@ -297,5 +252,3 @@ msg4 <- "Incorrect. Please try again"
 ex() %>% check_mc(correct = 2,
                   feedback_msgs = c(msg1, msg2, msg3, msg4))
 ```
-
-

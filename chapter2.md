@@ -6,11 +6,10 @@ description: ""
 ## Selecting variables
 
 ```yaml
-type: NormalExercise 
-xp: 100 
-key: 6987bd7422   
+type: NormalExercise
+key: 6987bd7422
+xp: 100
 ```
-
 
 We can subset the columns (variables) that matter by using `select()`.
 
@@ -38,7 +37,6 @@ select(df, 1:4, -2)
 
 `select()` does not change the data frame it is called on; you have to explicitly assign the result of `select()` to a variable (or object) to store the result.
 
-
 `@instructions`
 Using the dataframe `cars`, create an new variable called: `new.data` containing the range of columns from the first to the fifth column, excluding Horse Power (hp)
 
@@ -46,16 +44,13 @@ Using the dataframe `cars`, create an new variable called: `new.data` containing
 Use, select(name.of.your.dataframe ,  columns.to.be.selected)
 
 `@pre_exercise_code`
-
 ```{r}
 library('dplyr')
 library('reshape2')
 cars<-mtcars
 ```
 
-
 `@sample_code`
-
 ```{r}
 # Select first to fifth column excluding hp
 new.data<- ____
@@ -64,31 +59,25 @@ new.data<- ____
 head(____)
 ```
 
-
 `@solution`
-
 ```{r}
 
 ```
-
 
 `@sct`
-
 ```{r}
 
 ```
-
 
 ---
 
 ## Helper functions for variable selection
 
 ```yaml
-type: NormalExercise 
-xp: 100 
-key: 6944788821   
+type: NormalExercise
+key: 6944788821
+xp: 100
 ```
-
 
 `dplyr` comes with a set of helper functions that can help you select groups of variables inside a `select()` call. Some of the most important are:
 
@@ -106,7 +95,6 @@ For instance, to select from 'yourdata' only those columns containing the word "
 select(yourdata, contains("year"))
 ```
 
-
 `@instructions`
 Create a new object called `variables` including only those columns from `cars` starting with the letter 'b'.
 
@@ -114,45 +102,36 @@ Create a new object called `variables` including only those columns from `cars` 
 
 
 `@pre_exercise_code`
-
 ```{r}
 require(dplyr)
 cars<-mtcars
 ```
 
-
 `@sample_code`
-
 ```{r}
 # Subset columns starting with 'd' and store them in a new object called 'variables'.
 ___ <- ____
 ```
 
-
 `@solution`
-
 ```{r}
 
 ```
-
 
 `@sct`
-
 ```{r}
 
 ```
-
 
 ---
 
 ## Mutating  (creating)
 
 ```yaml
-type: NormalExercise 
-xp: 100 
-key: 5815ff4cda   
+type: NormalExercise
+key: 5815ff4cda
+xp: 100
 ```
-
 
 `mutate()` creates new columns which are added to a copy of the dataset.
 
@@ -174,7 +153,6 @@ In the following example, a new variable `x` is directly reused to create the ne
 mutate(my_data, x = a + b, y = x + c)
 ```
 
-
 `@instructions`
 Create a new object called kilometres. The new object must contain all the data included in the dataframe `cars`, plus an additional column estimating the kilometres per gallon (kpg) consumed by each vehicles.  
 
@@ -184,45 +162,36 @@ One mile per gallon `(mpg)` is equivalent to 1.609 kpg.
 Multiply the column mpg by 1.609 (`mpg * 1.609`)
 
 `@pre_exercise_code`
-
 ```{r}
 library('dplyr')
 cars<- mtcars
 ```
 
-
 `@sample_code`
-
 ```{r}
 # Create a new object (kilometers) including an additional column calculating kilometres per gallog (kpg)
 ___ <- mutate( ___ , ___ )
 ```
 
-
 `@solution`
-
 ```{r}
 x<- "mazda"
 ```
 
-
 `@sct`
-
 ```{r}
 ex() %>% check_object("x") %>% check_contains("mazda")
 ```
-
 
 ---
 
 ## Filtering records
 
 ```yaml
-type: MultipleChoiceExercise 
-xp: 50 
-key: d7c5a714bb   
+type: MultipleChoiceExercise
+key: d7c5a714bb
+xp: 50
 ```
-
 
 `Filter()` can be used the subset records based on a given criteria. R comes with a set of logical operators that you can use inside `filter()`:
 
@@ -243,7 +212,6 @@ filter(df, a > 0)
 
 By using the function `filter()` please determine how many vehicles weight more than 3 tons (`wt`), and have only 4 cylinders (`cyl`)
 
-
 `@instructions`
 - 2 cars.
 - 3 cars.
@@ -253,15 +221,12 @@ By using the function `filter()` please determine how many vehicles weight more 
 
 
 `@pre_exercise_code`
-
 ```{r}
 library('dplyr')
 cars<- mtcars
 ```
 
-
 `@sct`
-
 ```{r}
 msg1 <- "Well done!" 
 msg2 <- "Incorrect. Please try again"
@@ -271,17 +236,15 @@ ex() %>% check_mc(correct = 1,
                   feedback_msgs = c(msg1, msg2, msg3))
 ```
 
-
 ---
 
 ## Combining tests using boolean operators
 
 ```yaml
-type: NormalExercise 
-xp: 100 
-key: a4256ea51e   
+type: NormalExercise
+key: a4256ea51e
+xp: 100
 ```
-
 
 R also comes with a set of 'boolean operators' that you can use to combine multiple conditions. Examples of these are: `&` (and), `| `(or), and `! `(not). For instance, to filter in a table `df` the records with positive values in column 'a' and values equal to 'yes' in column b you can use: 
 
@@ -297,7 +260,6 @@ Another handy function is: `is.na()`. This example keeps the observations in df 
 filter(df, !is.na(x))
 ```
 
-
 `@instructions`
 Filter the vehicles from `data` weighting more than two tons (`wt` column), excluding those with 8 cylinders `(cyl)`.
 
@@ -305,44 +267,35 @@ Filter the vehicles from `data` weighting more than two tons (`wt` column), excl
 
 
 `@pre_exercise_code`
-
 ```{r}
 library(dplyr)
 cars<- mtcars
 ```
 
-
 `@sample_code`
-
 ```{r}
 
 ```
-
 
 `@solution`
-
 ```{r}
 
 ```
-
 
 `@sct`
-
 ```{r}
 
 ```
-
 
 ---
 
 ## Piping operator
 
 ```yaml
-type: NormalExercise 
-xp: 100 
-key: 8f7a96ad99   
+type: NormalExercise
+key: 8f7a96ad99
+xp: 100
 ```
-
 
 The Pipe operator `%>%` allows you to pipe the output from one function to the input of another function. Instead of nesting functions (reading from the inside to the outside), the idea of piping is to read the functions from left to right. Have a look at the following two examples that are completely equivalent: 
 
@@ -362,7 +315,6 @@ Note that the Example 2, can also be rewritten positioning the dataframe `df` th
 new.df<- df %>% select(mpg, wt) %>% filter(mpg >16) %>% head()
 ```
 
-
 `@instructions`
 Create a new object called 'weight' containing only the weight column `wt`, and excluding those cars with a weight lower than 2 tons
 
@@ -370,45 +322,36 @@ Create a new object called 'weight' containing only the weight column `wt`, and 
 
 
 `@pre_exercise_code`
-
 ```{r}
 library('dplyr')
 data<- mtcars
 ```
 
-
 `@sample_code`
-
 ```{r}
 # Store in a new object the weight column including only cars of more than 2 tons. 
 weight<- ___
 ```
 
-
 `@solution`
-
 ```{r}
 
 ```
-
 
 `@sct`
-
 ```{r}
 
 ```
-
 
 ---
 
 ## Reordering your data (arrange)
 
 ```yaml
-type: NormalExercise 
-xp: 100 
-key: 18fa35aea6   
+type: NormalExercise
+key: 18fa35aea6
+xp: 100
 ```
-
 
 To arrange (or re-order) rows by a particular column, you can list the name of the column you want to arrange the rows by. 
 
@@ -431,7 +374,6 @@ By default, arrange() arranges the rows from smallest to largest. You can revers
 data %>% arrange(desc(mpg))
 ```
 
-
 `@instructions`
 Arrange `data` in a new object called cylinders, so that vehicles with the same number of cylinder `(cyl)` appear next to each other. In addition, heavier cars should appear before lighter cars.
 
@@ -439,45 +381,36 @@ Arrange `data` in a new object called cylinders, so that vehicles with the same 
 
 
 `@pre_exercise_code`
-
 ```{r}
 library('dplyr')
 
 data<-mtcars
 ```
 
-
 `@sample_code`
-
 ```{r}
 
 ```
 
-
 `@solution`
-
 ```{r}
 #top
 ```
 
-
 `@sct`
-
 ```{r}
 
 ```
-
 
 ---
 
 ## Summarising data
 
 ```yaml
-type: MultipleChoiceExercise 
-xp: 50 
-key: d07a8068a7   
+type: MultipleChoiceExercise
+key: d07a8068a7
+xp: 50
 ```
-
 
 The `summarise()` function will create summary statistics (e.g. mean) for a given column in your dataframe. For instance, you can use the following code to estimate the average and standard deviation of the vehicles' weight: 
 
@@ -500,7 +433,6 @@ Apart from `mean`, some examples of aggregating functions that you can call from
 
 Now, using the `summarise()` function determine how many different type of cars the dataframe contains based on the number of `gears`. Also, estimate the average Miles per Gallons (`mpg`) of all th icles in the data set.
 
-
 `@instructions`
 - 3 different type of cars based on the number of gears and 22.13 mpg in average.
 - 2 different type of cars based on the number of gears and 21.60 mpg in average.
@@ -510,15 +442,12 @@ Now, using the `summarise()` function determine how many different type of cars 
 
 
 `@pre_exercise_code`
-
 ```{r}
 library('dplyr')
 cars<-mtcars
 ```
 
-
 `@sct`
-
 ```{r}
 msg1 <- "Incorrect. Please try again"
 msg2 <- "Incorrect. Please try again"
@@ -528,17 +457,15 @@ ex() %>% check_mc(correct = 3,
                   feedback_msgs = c(msg1, msg2, msg3))
 ```
 
-
 ---
 
 ## Group operations
 
 ```yaml
-type: MultipleChoiceExercise 
-xp: 50 
-key: 364aaa0539   
+type: MultipleChoiceExercise
+key: 364aaa0539
+xp: 50
 ```
-
 
 The `group_by()` verb allows you to split the dataframe by some variable (e.g. number of cylinders), and then apply summarising statistics for the different groups separately
 
@@ -551,7 +478,6 @@ cars %>% group_by(am) %>% summarise(mean(wt))
 
 Your challenge now is to combine `group_by()` and `summarise()` to find out how many gears (`gear`) have the vehicles with the highest average petrol consumption (`mpg`).
 
-
 `@instructions`
 - 3 gears.
 - 4 gears.
@@ -561,15 +487,12 @@ Your challenge now is to combine `group_by()` and `summarise()` to find out how 
 
 
 `@pre_exercise_code`
-
 ```{r}
 library('dplyr')
 cars<-mtcars
 ```
 
-
 `@sct`
-
 ```{r}
 msg1 <- "Incorrect. Please try again"
 msg2 <- "That's correct, cars with 4 gears have the highest average mpg (24.5)"
@@ -578,5 +501,3 @@ msg3 <- "Incorrect. Please try again"
 ex() %>% check_mc(correct = 2,
                   feedback_msgs = c(msg1, msg2, msg3))
 ```
-
-
