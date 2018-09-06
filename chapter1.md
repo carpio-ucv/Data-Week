@@ -35,7 +35,7 @@ Once you see the output press **"Submit Answer"**
 `@pre_exercise_code`
 ```{r}
 # Write your code below
-___ + ___
+#___ + ___
 ```
 
 `@sample_code`
@@ -45,7 +45,7 @@ ___ + ___
 
 `@solution`
 ```{r}
-2+2
+#2+2
 ```
 
 `@sct`
