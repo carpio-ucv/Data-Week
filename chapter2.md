@@ -186,7 +186,7 @@ head(kilometers)
 
 `@sct`
 ```{r}
-ex() %>% check_object("x") %>% check_contains("mazda")
+
 ```
 
 ---
