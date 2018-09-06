@@ -180,7 +180,7 @@ ___ <- mutate( ___ , ___ )
 
 `@solution`
 ```{r}
-kilometers <- mutate(cars,kpg=mpg * 1.609))
+kilometers <- mutate(cars,kpg=mpg * 1.609)
 head(kilometers)
 ```
 
