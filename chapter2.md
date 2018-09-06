@@ -415,12 +415,15 @@ cars<-mtcars
 ```{r}
 # Create new object called cylinders
 
-
+# Explore cylinders
+___ (cylinders)
 ```
 
 `@solution`
 ```{r}
-cylinders <- cars %>% arrange(cyl,desc(wt)) %>% head()
+cylinders <- cars %>% arrange(cyl,desc(wt)) 
+
+head(cylinders)
 
 ```
 
