@@ -288,6 +288,10 @@ cars<- mtcars
 ```{r}
 #Create 'filtered', including vehcles of more than 2 tons and exclude 8 cylinder cars. 
 filtered <- ___ ( ___ , ___ )
+
+# Explore filtered
+head(___)
+
 ```
 
 `@solution`
