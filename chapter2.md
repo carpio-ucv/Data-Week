@@ -357,7 +357,9 @@ head(sample)
 
 `@solution`
 ```{r}
+sample <- cars %>% select(1:4, disp) %>% filter(cyl!= 4) %>% head()
 
+print(sample)
 ```
 
 `@sct`
