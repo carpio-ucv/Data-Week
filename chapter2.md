@@ -130,7 +130,7 @@ head(variable)
 
 ---
 
-## Mutating  (creating)
+## Mutating  (creating new variables)
 
 ```yaml
 type: NormalExercise
