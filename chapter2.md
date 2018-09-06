@@ -420,7 +420,7 @@ cars<-mtcars
 
 `@solution`
 ```{r}
-cylinders <- cars %>% arrange(cyl, desc(wg))
+cylinders <- cars %>% arrange(cyl)#, desc(wg))
 
 
 ```
