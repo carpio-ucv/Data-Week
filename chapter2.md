@@ -292,7 +292,8 @@ filtered <- ___ ( ___ , ___ )
 
 `@solution`
 ```{r}
-filtered <- filter ( cars , wt > 2 , cyl != 8 )
+filtered <- filter ( cars , wt > 2 & cyl != 8 )
+head(filtered)
 ```
 
 `@sct`
