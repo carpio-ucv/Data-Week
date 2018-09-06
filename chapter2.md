@@ -461,7 +461,7 @@ Apart from `mean`, some examples of aggregating functions that you can call from
 - sd(x) - standard deviation.
 - n_distinct() - number of distinct values.
 
-Now, using the `summarise()` function determine how many different type of cars the dataframe contains based on the number of `gears`. Also, estimate the average Miles per Gallons (`mpg`) of all th icles in the data set.
+Now, using the `summarise()` function determine how many different type of cars the dataframe contains based on the number of gears (`gear`). Also, estimate the average Miles per Gallons (`mpg`) of all the vehicles in the data set.
 
 `@instructions`
 - 3 different type of cars based on the number of gears and 22.13 mpg in average.
