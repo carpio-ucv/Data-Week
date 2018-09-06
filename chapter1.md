@@ -34,13 +34,15 @@ Once you see the output press **"Submit Answer"**
 
 `@pre_exercise_code`
 ```{r}
-# Write your code below
+
 
 
 ```
 
 `@sample_code`
 ```{r}
+# Write your code below
+
 
 ```
 
