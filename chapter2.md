@@ -379,10 +379,10 @@ xp: 100
 
 To arrange (or re-order) rows by a particular column, you can list the name of the column you want to arrange the rows by. 
 
-For instance, to re-ordering the `data` based on the column Miles per Gallon (mpg) you can do:
+For instance, to re-ordering `cars` based on the column Miles per Gallon (mpg) you can do:
 
 ```
-data %>% arrange(mpg)
+cars %>% arrange(mpg)
 ```
 
 You can also re-order your data based on multiple columns (e.g. first by miles per gallon, then by weight)
@@ -391,7 +391,7 @@ You can also re-order your data based on multiple columns (e.g. first by miles p
 data %>% arrange(mpg, wt)
 ```
 
-By default, arrange() arranges the rows from smallest to largest. You can reverse this behavior with the desc() function. arrange() will reorder the rows from largest to smallest values of a variable if you wrap the variable name in desc() before passing it to arrange().
+By default, `arrange()` arranges the rows from smallest to largest. You can reverse this behavior with the `desc()` function.  `arrange()` will reorder the rows from largest to smallest values of a variable if you wrap the variable name in `desc()` before passing it to `arrange().`
 
 ```
 
@@ -399,7 +399,7 @@ data %>% arrange(desc(mpg))
 ```
 
 `@instructions`
-Arrange `data` in a new object called cylinders, so that vehicles with the same number of cylinder `(cyl)` appear next to each other. In addition, heavier cars should appear before lighter cars.
+Arrange `data` in a new object called `cylinders`, so that vehicles with the same number of cylinder `(cyl)` appear next to each other. In addition, heavier cars should appear before lighter cars.
 
 `@hint`
 
@@ -408,17 +408,21 @@ Arrange `data` in a new object called cylinders, so that vehicles with the same 
 ```{r}
 library('dplyr')
 
-data<-mtcars
+cars<-mtcars
 ```
 
 `@sample_code`
 ```{r}
+# Create new object called cylinders
+
 
 ```
 
 `@solution`
 ```{r}
-#top
+cylinders <- cars %>% arrange(cyl, desc(wg))
+
+
 ```
 
 `@sct`
