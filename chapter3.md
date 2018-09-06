@@ -204,19 +204,19 @@ The blue shading indicates ID variables that we want to represent individual row
 Press SUBMIT ANSWER to continue to a final practice...
 
 `@instructions`
-
+Press SUBMIT ANSWER to continue to a final practice...
 
 `@hint`
 
 
 `@pre_exercise_code`
 ```{r}
-Press SUBMIT ANSWER to continue to a final practice... 
+ 
 ```
 
 `@sample_code`
 ```{r}
-
+# Press SUBMIT ANSWER to continue to a final practice...
 ```
 
 `@solution`
