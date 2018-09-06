@@ -172,7 +172,7 @@ head(___)
 by.date <- melt(airquality, id.vars = c("Month", "Day"))
 
 # Create object 'original' to recover the same format we started with
-original <- dcast(original, Month + Day ~ variable)
+original <- dcast(by.date, Month + Day ~ variable)
 
 # Explore the first few records of 'original'
 head(original)
@@ -201,6 +201,8 @@ To have a better understanding of the example in the previous section, have a lo
 
 The blue shading indicates ID variables that we want to represent individual rows. The red shading represents variable names that we want to swing into column names. The grey shading represents the data values that we want to fill in the cells with.
 
+Press SUBMIT ANSWER to continue to a final practice...
+
 `@instructions`
 
 
@@ -209,7 +211,7 @@ The blue shading indicates ID variables that we want to represent individual row
 
 `@pre_exercise_code`
 ```{r}
-
+Press SUBMIT ANSWER to continue to a final practice... 
 ```
 
 `@sample_code`
