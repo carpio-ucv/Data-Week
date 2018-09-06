@@ -82,7 +82,7 @@ By default, `melt` assumes that all columns with numeric values are variables wi
 Create a new variable called `by.date` in which `airquality` is transform into long format, but the columns `month` and `day` are kept as ID variables.
 
 `@hint`
-
+R is case sensitive, make sure you write the name of the variables property.
 
 `@pre_exercise_code`
 ```{r}
@@ -106,7 +106,9 @@ tail(___)
 
 `@solution`
 ```{r}
-
+by.date <- melt(cars , id.vars=("Month","Day"))
+head(by.date)
+tail(by.date)
 ```
 
 `@sct`
