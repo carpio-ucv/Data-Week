@@ -18,7 +18,6 @@ As an example, take the following call, that selects the variables `var1` and `v
 ```
 
 select(df, var1, var2)
-
 ```
 
 You can also select columns based on the index of the column (position of the column). For instance, for selecting columns: one, three and five; you can use:
@@ -61,11 +60,13 @@ head(____)
 
 `@solution`
 ```{r}
-
+new.data<- select(cars, 1:5, -hp)
+head(new.data)
 ```
 
 `@sct`
 ```{r}
+
 
 ```
 
