@@ -334,7 +334,7 @@ new.df<- df %>% select(mpg, wt) %>% filter(mpg >16) %>% head()
 ```
 
 `@instructions`
-Create a new object called `sample` that contains only the first 4 columns from `cars`, excluding the column `disp`. Then filter out those vehicles with 4 cylinders (`cyl`). Finally, subset the first 6 records using `head()`. You **MUST** use the piping operator `%>%` to create the `sample` dataframe.
+Create a new object called `sample` that contains only the first 4 columns from `cars`, excluding the column `disp`. Then, filter out those vehicles with 4 cylinders (`cyl`). Finally, subset the first 6 records using `head()`. You **MUST** use the piping operator `%>%` to create the `sample` dataframe.
 
 `@hint`
 
@@ -347,8 +347,12 @@ cars<- mtcars
 
 `@sample_code`
 ```{r}
-# Store in a new object the weight column including only cars of more than 2 tons. 
-weight<- ___
+# Create a new object called 'sample'
+sample <- ___
+
+# Explore sample
+head(sample)
+
 ```
 
 `@solution`
