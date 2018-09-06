@@ -26,7 +26,7 @@ People often find it easier to record their data in wide format. In this format,
 
 However, you need long-format data much more commonly than wide-format, specially if you want to do data visualisations in R or Tableau.  
 
-You can use the function `melt()` (from the package reshape2) to transform the data from wide format to long format.
+You can use the function `melt()` (from the package `reshape2`) to transform the data from wide format to long format.
 
 `@instructions`
 Apply the function `melt()` and store the output in a new object called `long`
@@ -44,7 +44,7 @@ cars<-mtcars
 `@sample_code`
 ```{r}
 # Create the object 'long' reshaping airquality to long format
-___ <- melt(___ , ___)
+___ <- melt(___)
 
 # Explore the first few records of 'long'
 head(___)
@@ -56,7 +56,9 @@ tail(___)
 
 `@solution`
 ```{r}
-
+long <- melt(airquality)
+head(long)
+tail(long)
 ```
 
 `@sct`

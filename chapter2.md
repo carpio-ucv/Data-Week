@@ -499,7 +499,7 @@ xp: 50
 
 The `group_by()` verb allows you to split the dataframe by some variable (e.g. number of cylinders), and then apply summarising statistics for the different groups separately
 
-For instance, to compare the average weight (`wt`) of cars with different type of transmission (`am`), you can use the following code:
+For instance, to compare the average weight (`wt`) of cars with different type of transmission (column `am`), you can use the following code:
 
 ```
 
