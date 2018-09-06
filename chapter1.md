@@ -3,7 +3,7 @@ title: 'R Basics'
 description: 'This is a template chapter.'
 ---
 
-## An exercise title written in sentence case
+## R Basics
 
 ```yaml
 type: NormalExercise
