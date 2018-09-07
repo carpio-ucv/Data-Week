@@ -239,7 +239,7 @@ key: cf82633e3d
 xp: 50
 ```
 
-Using the `airquality`, find out what is the month of the year with more variability in `ozone` measures?
+Using the `airquality`, find out what is the month of the year with more variability in `Wind` measures?
 
 `@instructions`
 - May (5)
@@ -248,7 +248,8 @@ Using the `airquality`, find out what is the month of the year with more variabi
 - August (8)
 
 `@hint`
-
+Try estimating the standard deviation per month:
+airquality %>% group_by(Month) %>% summarise(sd = sd(Wind) %>% arrange(desc(sd))
 
 `@pre_exercise_code`
 ```{r}
